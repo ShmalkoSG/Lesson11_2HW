@@ -19,13 +19,7 @@ public final class Billing {
      */
     public ArrayList <Record> callHistory=new ArrayList<>();
 
-    /**
-     * Инициализации счета. Указываем сколько у нас денег в самом начале
-     *
 
-     * Замечание: Конструктор имеет приватную область видимости, так как мы должны гарантировать
-     * что объект MoneyAccount в нашей системе будет существовать в единственном экземпляре
-     */
     public Billing() {
 
         callHistory.add(new Record(89890009000L,"MTC",new java.util.Date()));
@@ -98,7 +92,7 @@ public final class Billing {
         station21.start();
         station3.start();
 
-        //подождем 100 мс. пока все потоки сделают своё дело
+
         sleep(100);
         instance.print();
 
